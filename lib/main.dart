@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:projetodos/boton.dart';
+import 'package:projetodos/boton2.dart';
 import 'package:projetodos/novocomponenente.dart';
 
 void main() {
@@ -11,14 +13,24 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: "App refactor",
-        home: Scaffold(
-          appBar: AppBar(
-            title: Text("App refatorar"),
-            backgroundColor: const Color.fromARGB(255, 29, 255, 153),
-          ),
-          body: MaisUmDia(nome: "Novo texto",)
+      title: "App refactor",
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("App refatorar"),
+          backgroundColor: const Color.fromARGB(255, 29, 255, 153),
         ),
-      );
+        body: Column(
+          children: [
+            MaisUmDia(
+              nome: "Novo texto",
+            ),
+            Boton("teste1", () {
+              print("Funcao");
+            }),
+            Boton2()
+          ],
+        ),
+      ),
+    );
   }
 }
