@@ -24,10 +24,6 @@ class MyApp extends StatelessWidget {
             MaisUmDia(
               nome: "Novo texto",
             ),
-            Boton("teste1", () {
-              print("Funcao");
-            }),
-            Boton2()
           ],
         ),
       ),

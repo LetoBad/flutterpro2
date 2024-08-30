@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:projetodos/boton.dart';
+import 'package:projetodos/boton2.dart';
 
 class MaisUmDia extends StatelessWidget {
   final String nome;
@@ -13,6 +15,15 @@ class MaisUmDia extends StatelessWidget {
             "$nome",
             style: TextStyle(fontSize: 40),
           ),
+          Boton("teste1", () {
+            print("Funcao");
+          }),
+          SizedBox(
+            height: 20,
+          ),
+          Boton("teste2", () {
+            print("Funcao2");
+          }),
         ],
       ),
     );
